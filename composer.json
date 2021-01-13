@@ -1,0 +1,13 @@
+{
+    "name": "sadique/privilege",
+    "description": "Dynamically pages give to other user.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sadique\\Privilege\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<?php
+
+// use Illuminate\Support\Facades\Route;
+
+use Sadique\Privilege\Http\Controllers\Privilege1Controller;
+
+Route::group(['namespace' => 'Sadique\Privilege\Http\Controllers'], function(){
+    Route::get('/addpages', [ Privilege1Controller::class , 'addpages' ])->name('addpages');
+    Route::post('/subaddmodule', [ Privilege1Controller::class , 'subaddmodule' ])->name('subaddmodule');
+    Route::post('/subaddsubmodule', [ Privilege1Controller::class , 'subaddsubmodule' ])->name('subaddsubmodule');
+    Route::post('/delmodule', [ Privilege1Controller::class , 'delmodule' ])->name('delmodule');
+    Route::post('/delsubmodule', [ Privilege1Controller::class , 'delsubmodule' ])->name('delsubmodule');
+    Route::post('/updmodule', [ Privilege1Controller::class , 'updmodule' ])->name('updmodule');
+    Route::post('/updsubmodule', [ Privilege1Controller::class , 'updsubmodule' ])->name('updsubmodule');
+    Route::post('/showmodule', [ Privilege1Controller::class , 'showmodule' ])->name('showmodule');
+    Route::post('/hidemodule', [ Privilege1Controller::class , 'hidemodule' ])->name('hidemodule');
+    Route::post('/showsubmodule', [ Privilege1Controller::class , 'showsubmodule' ])->name('showsubmodule');
+    Route::post('/hidesubmodule', [ Privilege1Controller::class , 'hidesubmodule' ])->name('hidesubmodule');
+
+    Route::get('/showprivilege', [ Privilege1Controller::class , 'showprivilege' ])->name('showprivilege');
+});
+
+
+
+// Route::get('privilege',function(){
+//     return 'rrr';
+// });
