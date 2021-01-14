@@ -6,6 +6,26 @@
    
 <section class="content">
     <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{route('addpages')}}">Add Pages</a>
+                        </li>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="{{route('showprivilege')}}">Show Privilege</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </nav> <br>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12"><br>
               <div class="card card-success">

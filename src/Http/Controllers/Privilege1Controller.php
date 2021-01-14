@@ -84,7 +84,7 @@ class Privilege1Controller extends Controller
 
 
 
-        return view('privilege::privilege',compact('tb','mod','tb2'));
+        return view('privilege::addpages',compact('tb','mod','tb2'));
         // return view('packagename::bladefilename');
     }
 
