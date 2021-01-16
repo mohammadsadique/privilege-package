@@ -3,6 +3,7 @@
 // use Illuminate\Support\Facades\Route;
 
 use Sadique\Privilege\Http\Controllers\Privilege1Controller;
+use Sadique\Privilege\Http\Controllers\Privilege2Controller;
 
 Route::group(['namespace' => 'Sadique\Privilege\Http\Controllers'], function(){
     Route::get('/addpages', [ Privilege1Controller::class , 'addpages' ])->name('addpages');
@@ -18,6 +19,7 @@ Route::group(['namespace' => 'Sadique\Privilege\Http\Controllers'], function(){
     Route::post('/hidesubmodule', [ Privilege1Controller::class , 'hidesubmodule' ])->name('hidesubmodule');
 
     Route::get('/showprivilege', [ Privilege1Controller::class , 'showprivilege' ])->name('showprivilege');
+    Route::get('/assignprivilege', [ Privilege2Controller::class , 'assignprivilege' ])->name('assignprivilege');
 });
 
 
