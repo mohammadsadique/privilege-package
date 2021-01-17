@@ -20,6 +20,15 @@ Route::group(['namespace' => 'Sadique\Privilege\Http\Controllers'], function(){
 
     Route::get('/showprivilege', [ Privilege1Controller::class , 'showprivilege' ])->name('showprivilege');
     Route::get('/assignprivilege', [ Privilege2Controller::class , 'assignprivilege' ])->name('assignprivilege');
+    Route::post('/subassignpri', [ Privilege2Controller::class , 'subassignpri' ])->name('subassignpri');
+    Route::get('/staffprivilege/{id}', [ Privilege2Controller::class , 'staffprivilege' ])->name('staffprivilege');
+
+    Route::post('/assignmodule',[ Privilege2Controller::class, 'assignmodule'])->name('assignmodule');
+    Route::post('/notassignmodule',[ Privilege2Controller::class, 'notassignmodule'])->name('notassignmodule');
+    Route::post('/Allassignmodule',[ Privilege2Controller::class, 'Allassignmodule'])->name('Allassignmodule');
+    Route::post('/Allremovemodule',[ Privilege2Controller::class, 'Allremovemodule'])->name('Allremovemodule');
+    Route::post('/assignsubmodule',[ Privilege2Controller::class, 'assignsubmodule'])->name('assignsubmodule');
+    Route::post('/removesubmodule',[ Privilege2Controller::class, 'removesubmodule'])->name('removesubmodule');
 });
 
 
