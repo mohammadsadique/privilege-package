@@ -9,5 +9,12 @@
         "psr-4": {
             "Sadique\\Privilege\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sadique\\Privilege\\ServiceProvider"
+            ]
+        }
     }
 }
