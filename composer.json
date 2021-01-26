@@ -13,7 +13,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sadique\\Privilege\\ServiceProvider"
+                "Sadique\\Privilege\\PrivilegeServiceProvider"
             ]
         }
     }
