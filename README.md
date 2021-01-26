@@ -3,8 +3,8 @@
 
 
 
-[![Issues](https://img.shields.io/github/issues/guzzle/guzzle.svg?style=flat-square)](https://github.com/mohammadsadique/privilege-package/issues)
-[![Stars](https://img.shields.io/github/stars/guzzle/guzzle.svg?style=flat-square)](https://github.com/mohammadsadique/privilege-package/stargazers)
+[![Issues](https://img.shields.io/github/issues/mohammadsadique/privilege-package?style=flat-square)](https://github.com/mohammadsadique/privilege-package/issues)
+[![Stars](https://img.shields.io/github/stars/mohammadsadique/privilege-package?style=flat-square)](https://github.com/mohammadsadique/privilege-package/stargazers)
 
 
 
