@@ -7,6 +7,8 @@ use Sadique\Privilege\Models\Privileges;
 use Sadique\Privilege\Models\AssignPrivilege;
 use App\Models\Login;
 
+
+
 class Privilege2Controller extends Controller
 {
     public function assignprivilege()
