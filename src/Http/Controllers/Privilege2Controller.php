@@ -11,17 +11,24 @@ class Privilege2Controller extends Controller
 {
     public function assignprivilege()
     {   
-        $tb = 
-        '<tr>
-            <td>1</td>
-            <td style="text-align: center;">Mohammad Sadique<input type="hidden" value="Mohammad Sadique" class="staffname"></td>
-            <td style="text-align: center;">sadiquedeveloper@gmail.com</td>
-            <td style="text-align: center;">
-                <button type="submit" value="1" class="btn btn-success assignpri"><i class="fas fa-user"></i> Assign Privilege</button>   
-            </td>
-        </tr>';
-          
+        $ac = Login::select('*')->orderBy('id','DESC')->get();
+        $i = 1;
+        $tb = '';
+        foreach($ac as $val){
+            $tb .= 
+            '<tr>
+                <td>'.$i.'</td>
+                <td style="text-align: center;">'.$val->name.'<input type="hidden" value="'.$val->name.'" class="staffname"></td>
+                <td style="text-align: center;">'.$val->email.'</td>
+                <td style="text-align: center;">'.$val->mobile.'</td>
+                <td style="text-align: center;">
+                    <button type="submit" value="'.$val->id.'" class="btn btn-success assignpri"><i class="fas fa-user"></i> Assign Privilege</button>   
+                </td>
+            </tr>';
+            $i++;
+        }
         return view('privilege::assignprivilege',compact('tb'));
+        
     }
 
     public function subassignpri(Request $request)
