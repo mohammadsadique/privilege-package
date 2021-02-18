@@ -8,14 +8,12 @@ use Illuminate\Http\Request;
 use Sadique\Privilege\Models\Privileges;
 
 class Privilege1Controller extends Controller
-{
+{    
     public function addpages()
     {
-
+        $url = config('privilege.url');
         $i = 1;
-        $tb = '';
-        // $co1 = Privileges::where('status',1)->count(); dd($co1);
-        // if($co1 > 0){            
+        $tb = '';         
             $t = Privileges::where('status',1)->get();
             foreach($t as $val){
             if($val->onoff == 1){
@@ -37,9 +35,7 @@ class Privilege1Controller extends Controller
             </tr>';
             $i++;
             }
-        // } else {
-        //     $tb .= null;
-        // }
+     
 
         $mod = '<option value="">Select Module</option><option value="nomodule">No Module</option>';
         $f = Privileges::where(['status'=>1,'onoff'=>1])->get();
@@ -81,9 +77,6 @@ class Privilege1Controller extends Controller
           </tr>';
           $i2++;
         }
-
-
-
         return view('privilege::addpages',compact('tb','mod','tb2'));
         // return view('packagename::bladefilename');
     }
@@ -191,9 +184,6 @@ class Privilege1Controller extends Controller
             ';
         }
         return json_encode(array($a,$mod));
-        // dd($b);
-        //$mod = '<option value="'.$b->id.'">'.$b->module.'</option>'; 
-		//return redirect()->back()->with(['ban2' => $a , 'ban3' => $b ]);
     }
 
     public function showmodule(Request $request)

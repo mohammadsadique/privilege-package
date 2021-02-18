@@ -17,7 +17,7 @@ Run Migrate
 php artisan migrate
 
 Publish blade page to your views folder (Go to resources/views/vendor/privilege/all blade pages)
-php artisan vendor:publish
+### php artisan vendor:publish
 
 
 Note:- Please make `logins` table 
@@ -30,3 +30,15 @@ Note:- Please make `logins` table
             $table->string('privilege_id')->nullable();
             $table->timestamps();
         });
+
+
+##  URL Route Links
+
+1. http://projecturl/addpages
+2. http://projecturl/showprivilege
+3. http://projecturl/assignprivilege
+
+
+Email: [mdsadiquedeveloper@gmail.com](mailto:mdsadiquedeveloper@gmail.com)<br />
+WhatsApp Web [(91) 97705-99354](https://web.whatsapp.com/send?phone=9770599354)<br />
+WhatsApp Mobile [(91) 97705-99354](https://api.whatsapp.com/send?phone=9770599354)<br />

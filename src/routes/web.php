@@ -6,6 +6,7 @@ use Sadique\Privilege\Http\Controllers\Privilege1Controller;
 use Sadique\Privilege\Http\Controllers\Privilege2Controller;
 
 Route::group(['namespace' => 'Sadique\Privilege\Http\Controllers'], function(){
+    // Route::get('/{slug}', [ Privilege1Controller::class , 'addpages' ])->name('addpages');
     Route::get('/addpages', [ Privilege1Controller::class , 'addpages' ])->name('addpages');
     Route::post('/subaddmodule', [ Privilege1Controller::class , 'subaddmodule' ])->name('subaddmodule');
     Route::post('/subaddsubmodule', [ Privilege1Controller::class , 'subaddsubmodule' ])->name('subaddsubmodule');
@@ -31,8 +32,3 @@ Route::group(['namespace' => 'Sadique\Privilege\Http\Controllers'], function(){
     Route::post('/removesubmodule',[ Privilege2Controller::class, 'removesubmodule'])->name('removesubmodule');
 });
 
-
-
-// Route::get('privilege',function(){
-//     return 'rrr';
-// });

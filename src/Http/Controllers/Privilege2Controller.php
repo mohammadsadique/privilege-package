@@ -4,8 +4,8 @@ namespace Sadique\Privilege\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Sadique\Privilege\Models\Privileges;
-use Sadique\Privilege\Models\AssignPrivilege;
 use App\Models\Login;
+
 
 
 
@@ -36,7 +36,6 @@ class Privilege2Controller extends Controller
     public function subassignpri(Request $request)
     {
         $id = $request->id;
-        //$staff = Login::select('*')->where(['id'=>$id,'role'=>'staff'])->first();
 
         return redirect()->route('staffprivilege',['id' => $id]);
     }
@@ -46,26 +45,19 @@ class Privilege2Controller extends Controller
         // $staff = array('id'=>'1','name'=>'sadique','email'=>'sadiquedeveloper@gmail.com');
         $staff = Login::where('id',$id)->first();
         $f = explode(',',$staff->privilege_id);
-        //    dd($staff['id']);
-        // $a = array(14,16,22);
-        // $b = array(14.16,17);
-
-        // $c = array_intersect($a,$b);
-        // print_r($f);
-
-        // die;
 
         $mod = '';
         $getmodules = Privileges::where(['status'=>1,'onoff'=>1])->get();
         foreach($getmodules as $getmodule){
-          $getsubmods = Privileges::where(['status'=>0,'tag'=>$getmodule->tag,'onoff'=>1])->get();
+            $getsubmods = Privileges::where(['status'=>0,'tag'=>$getmodule->tag,'onoff'=>1])->get();
             $check2 = '';
             if(in_array($getmodule->id , $f)) 
             {
                 $check2 = "checked"; 
             }
-          $mod .=
-          '<div class="col-md-4">
+            $mod .=
+            '
+            <div class="col-md-4">
                 <br>                
                 <div class="card card-success">
                     <div class="card-header">       
@@ -96,8 +88,8 @@ class Privilege2Controller extends Controller
                     }
                     $mod .=
                     '</div>
-              </div>
-          </div>';
+                </div>
+            </div>';
         }
         $mod2 = '';
         $c = Privileges::where(['tag'=>0,'onoff'=>1])->get();

@@ -12,8 +12,12 @@ class PrivilegeServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views', 'privilege');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
+        $this->mergeConfigFrom(
+            __DIR__.'/config/privilege.php', 'privilege'
+        );
         $this->publishes([
             __DIR__.'/resources/views' => resource_path('views/vendor/privilege'),
+            __DIR__.'/config/privilege.php' => config_path('privilege.php'),
         ]);
     }
 
