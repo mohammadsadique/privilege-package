@@ -10,11 +10,11 @@
 
 ## Dynamically pages give to other user.
 
-Install Package
-composer require sadique/privilege
+Install Package :
+#### composer require sadique/privilege
 
-Run Migrate
-php artisan migrate
+Run Migrate :
+#### php artisan migrate
 
 Publish blade page to your views folder (Go to resources/views/privilege/all blade pages)
 ### php artisan vendor:publish
