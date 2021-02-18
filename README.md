@@ -17,7 +17,7 @@ Run Migrate :
 #### php artisan migrate
 
 Publish blade page to your views folder (Go to resources/views/privilege/all blade pages)
-### php artisan vendor:publish
+#### php artisan vendor:publish
 
 
 Note:- Please make `logins` table 
