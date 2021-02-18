@@ -16,7 +16,7 @@ composer require sadique/privilege
 Run Migrate
 php artisan migrate
 
-Publish blade page to your views folder (Go to resources/views/vendor/privilege/all blade pages)
+Publish blade page to your views folder (Go to resources/views/privilege/all blade pages)
 ### php artisan vendor:publish
 
 
